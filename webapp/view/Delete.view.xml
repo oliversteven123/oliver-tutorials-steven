@@ -1,0 +1,25 @@
+<mvc:View
+	controllerName="project2.controller.Delete"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic"
+	xmlns:smartfield="sap.ui.comp.smartfield"
+	xmlns:smartform="sap.ui.comp.smartform"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m">
+	<App id="sdfsd">
+	<pages>
+	<Page id="wrerwrew" title="{i18n>title}">
+		<content>
+		<f:SimpleForm id="simpleFormChange" title="Carrier Details" editable="true" class="editableForm sapUiSmallMarginTopBottom">
+		<f:content>
+		<Label id="Id2" text="Id"/>
+		<Input id="Id" value="3be72b92-9ec6-1eee-92f9-4b09b32010e5"/>
+		</f:content>
+		</f:SimpleForm>
+		<Button id="DeleteButton" text="delete" press="onDelete2"></Button>
+		</content>
+	</Page>
+	</pages>
+	</App>
+</mvc:View>

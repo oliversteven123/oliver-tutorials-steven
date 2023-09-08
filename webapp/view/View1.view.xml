@@ -1,0 +1,212 @@
+<mvc:View 
+    controllerName="project2.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+<!--   <Page id="page" title="{i18n>title}">
+        <content />
+    </Page>   -->
+    <App id = "sdffdssd">
+        <pages>
+            <Page id = "sdffddssd" title="openSAP - Developing with SAPUI5">
+                <content>
+                <Button id="employeeListBtn" text="{i18n>ShowEmployeeList}" press=".onNavToEmployees" class="sapUiTinyMarginEnd"/>
+                <Button id="addButton" icon="sap-icon://add" press="onAdd" />
+                <Button id="deleteButton" icon="sap-icon://delete" press="onDelete"/>
+
+                    <IconTabBar
+                        id="iconTabBar"
+                        select="onQuickFilter"
+                        expandable="false"
+                        applyContentPadding="false">
+                        <items>
+                            <IconTabFilter id = "sdafdfs"
+                                key="all"
+                                showAll="true"
+                                count="{i18n>worklistFilterProductsAllCount}"
+                                text="{i18n>worklistFilterProductsAll}"/>
+                            <IconTabSeparator id = "sadssadas"/>
+                            <IconTabFilter
+                                id="sfsfsssssss"
+                                key="STEVEN"
+                                icon="sap-icon://waiver"
+                                iconColor="Positive"
+                                text="Steven"
+                                count="{View1>/STEVEN}"
+                                />
+                            <IconTabFilter
+                                id="sfsfssssdsss"
+                                key="HANS"
+                                icon="sap-icon://loan"
+                                iconColor="Critical"
+                                text="Hans"
+                                count="{View1>/HANS}"/>
+                        </items>
+                        <content>
+                            <Table
+                                id="tablsde"
+                                width="auto"
+                                items="{
+                                    path: '/ZZSK_ZC_TEAM_VIEW',
+                                    sorter: {
+                                        path: 'CurrencyCode',
+                                        descending: false
+                                    }
+                                }">
+
+                                <headerToolbar>
+                                    <OverflowToolbar id="sdfsdsdsf">
+                                        <Title
+                                            id="tableHeasder"
+                                            text="{worklistView>/worklistTableTitle}"
+                                            level="H3"/>
+                                        <ToolbarSpacer id="sdfdsdssf444"/>
+                                        <SearchField
+                                            id="searchFiesld"
+                                            tooltip="{i18n>worklistSearchTooltip}"
+                                            search=".onSearch">
+                                            <layoutData>
+                                                <OverflowToolbarLayoutData id="sdfdsdsf444s44"
+                                                    maxWidth="200px"
+                                                    priority="NeverOverflow"/>
+                                            </layoutData>
+                                        </SearchField>
+                                        <Button id="addButtdon" icon="sap-icon://add" press="onAdd" />
+
+                                    </OverflowToolbar>
+                                </headerToolbar>
+
+                                <columns>
+                                    <Column id="namseColumn">
+                                        <Text text="{i18n>tableNameColumnTitle}" id="nameColusmnTitle"/>
+                                    </Column>
+                                    <Column 
+                                        id="Nasme"
+                                        demandPopin="true"
+                                        minScreenWidth="Tablet">
+                                        <Text id="sdfdsadsf3" text="{i18n>tableSupplierColumnTitle}"/>
+                                    </Column>
+                                    <Column id="webAddreassColumn"
+                                        demandPopin="false"
+                                        minScreenWidth="Tablet">
+                                        <Text id="sdfdsdsaf34345" text="{i18n>tableSupplierWebAddressColumnTitle}"/>
+                                    </Column>
+                                </columns>
+
+                                <items>
+                                    <ColumnListItem id="sdfdsdssf555"
+                                        type="Navigation"
+                                        press=".onPress">
+                                        <cells>
+                                            <ObjectIdentifier id="sdfdssdsf4"
+                                                title="{Name}"
+                                                text="{Exposure}"/>
+                                            <Text id="sdfdsdsfs444424" text="{Bonus}"/>
+                                            <Link id="sdfdsdssfkd"
+                                                text="{CreatedBy}"
+                                                href="{IdUf}"
+                                                target="_blank"/>
+                                            </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </content>
+                    </IconTabBar>   
+
+                    <IconTabBar
+                        id="idTopLevelIconTabBar"
+                        selectedKey="db"
+                        class="sapUiResponsiveContentPadding">
+                        <items>
+                            <IconTabFilter id = "sdffddfsdsssd"
+                                text="Oliver Table" 
+                                key="db1">
+                                <content>
+
+<!--                                <List
+                                        id="currencyList" 
+                                        items="{/SAP__Currencies}"> 
+                                        <items>
+                                            <ObjectListItem id = "sdf3435fdssd"
+                                                title="{CurrencyCode}">
+                                            </ObjectListItem>
+                                        </items>
+                                    </List> -->     
+                                    <Button id="addButton2" icon="sap-icon://add" press="onAdd" />
+                                    <Table
+                                        id="table"
+                                        width="auto"
+                                        items="{
+                                            path: '/ZZSK_ZC_TEAM_VIEW',
+                                            sorter: {
+                                                path: 'CurrencyCode',
+                                                descending: false
+                                            }
+                                        }">
+
+                                        <headerToolbar>
+                                            <OverflowToolbar id="sdfdsdsf">
+                                                <Title
+                                                    id="tableHeader"
+                                                    text="{worklistView>/worklistTableTitle}"
+                                                    level="H3"/>
+                                                <ToolbarSpacer id="sdfdsdsf444"/>
+                                                <SearchField
+                                                    id="searchField"
+                                                    tooltip="{i18n>worklistSearchTooltip}"
+                                                    search=".onSearch">
+                                                    <layoutData>
+                                                        <OverflowToolbarLayoutData id="sdfdsdsf44444"
+                                                            maxWidth="200px"
+                                                            priority="NeverOverflow"/>
+                                                    </layoutData>
+                                                </SearchField>
+                                            </OverflowToolbar>
+                                        </headerToolbar>
+
+                                        <columns>
+                                            <Column id="nameColumn">
+                                                <Text text="{i18n>tableNameColumnTitle}" id="nameColumnTitle"/>
+                                            </Column>
+                                            <Column 
+                                                id="Name"
+                                                demandPopin="true"
+                                                minScreenWidth="Tablet">
+                                                <Text id="sdfdsdsf3" text="{i18n>tableSupplierColumnTitle}"/>
+                                            </Column>
+                                            <Column id="webAddressColumn"
+                                                demandPopin="false"
+                                                minScreenWidth="Tablet">
+                                                <Text id="sdfdsdsf34345" text="{i18n>tableSupplierWebAddressColumnTitle}"/>
+                                            </Column>
+                                        </columns>
+
+                                        <items>
+                                            <ColumnListItem id="sdfdsdsf555"
+                                                type="Navigation"
+                                                press=".onPress">
+                                                <cells>
+                                                    <ObjectIdentifier id="sdfdsdsf4"
+                                                        title="{Name}"
+                                                        text="{Exposure}"/>
+                                                    <Text id="sdfdsdsf444424" text="{Bonus}"/>
+                                                    <Link id="sdfdsdsfkd"
+                                                        text="{CreatedBy}"
+                                                        href="{IdUf}"
+                                                        target="_blank"/>
+                                                 </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+                                </content>
+                            </IconTabFilter>
+                        </items>
+                    </IconTabBar>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>

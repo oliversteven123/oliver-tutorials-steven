@@ -1,0 +1,70 @@
+<mvc:View
+    controllerName="project2.controller.Object"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+	xmlns:course="project2.control">
+    <semantic:SemanticPage
+        id="page"
+        headerPinnable="false"
+        toggleHeaderOnTitleClick="false">
+
+        <semantic:titleHeading>
+            <Title id='fsdfsd4'
+                text="{Id}"
+                level="H2"/>
+        </semantic:titleHeading>
+        <Button id="Delete" text="Delete" press="onDelete2"/>
+
+	    <semantic:headerContent>
+            <ObjectNumber id='32333333' />
+	      	<Panel id='d333'
+				class="sapUiResponsiveMargin"
+				width="auto"
+				headerText="{i18n>productTitle}">
+				<content>
+					<form:SimpleForm id="objectForm">
+						<form:content>
+							<Label id='344345544554544' text="Team name" visible="false"/>
+							<Text id='3444454444445' text="{Name}" visible="false"/>
+							<Label id='3445445454545545534' text="ID" visible="false"/>
+							<Text id='34445455445454' text="{Id}" visible="false"/>
+							<Label id='344345454455454' text="Exposure"/>
+							<Text id='3445454g445' text="{Exposure}"/>
+							<Label id='344gf545534' text="Bonus"/>
+							<Text id='3444dfd545sdfdf454' text="{Bonus}"/>
+							<Label id='344gf5sdsd45534' text="Currency Code"/>
+							<Text id='3444dfd545454' text="{CurrencyCode}"/>	
+							<Label id='344gf5455sfsfdsd34' text="Created By"/>
+							<Text id='3444dfd5sss45454' text="{CreatedBy}"/>										
+						</form:content>
+					</form:SimpleForm>
+				</content>
+			</Panel>
+			
+<!--			<Panel id="sadfdsffds"
+				headerText="Object List">
+				<content>
+    			<course:ProductRate  id="sadfdsffds333" valueSubmit="onRatingChanged"/> 
+					<form:SimpleForm id="simpleForm">
+						<form:content>
+							<Label  id="sadfdsffdsffddf" text="{Name}"/>
+							<Text  id="sadfdsffdssdffsddfssdf" text="{Name}"/>
+							<Label  id="sadfdsffdssdfdsdsfsdf" text="{Name}"/>
+							<Text  id="sadfdsffdssdfsddsfsdf" text="{Name}"/>
+						</form:content>
+					</form:SimpleForm>
+				</content>
+			</Panel>  -->
+
+        </semantic:headerContent>
+
+<!--       <semantic:sendEmailAction>
+            <semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+        </semantic:sendEmailAction>        -->
+
+    </semantic:SemanticPage> 
+
+</mvc:View>
